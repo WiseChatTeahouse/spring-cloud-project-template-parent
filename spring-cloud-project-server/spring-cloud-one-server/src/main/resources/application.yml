@@ -1,0 +1,23 @@
+server:
+  port: 2580
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/wisechat_teahouse_dev?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimezone=Asia/Shanghai
+    username: root
+    password: admin
+    # hikari连接池设置
+    hikari:
+      connection-timeout: 10000
+      validation-timeout: 3000
+      idle-timeout: 30000
+      login-timeout: 5
+      max-lifetime: 60000
+      maximum-pool-size: 10
+      minimum-idle: 5
+      read-only: false
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: admin123
+    database: 1
